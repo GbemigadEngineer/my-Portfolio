@@ -10,6 +10,10 @@ li {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* General body styling */
 body {
   font-family: Arial, sans-serif;
@@ -17,6 +21,7 @@ body {
   background-color: #f4f4f4;
   color: #333;
   padding: 20px;
+  padding-top: 80px;
 }
 
 /* Navigation bar */
@@ -55,4 +60,44 @@ footer {
   background: #333;
   color: white;
   padding: 10px;
+}
+
+/* Navbar */
+nav {
+  background-color: #1f2937; /* Dark Grayish Blue */
+  color: white; /* Text color for navbar items */
+  padding: 15px 0; /* Padding around navbar */
+  position: fixed; /* Keep navbar fixed on top */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the navbar stays on top */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+nav a {
+  color: white; /* Default color for navbar links */
+  text-decoration: none; /* Remove underline */
+  margin: 0 15px; /* Space out links */
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px; /* Slight spacing for elegance */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #3b82f6; /* Hover color for links (Vibrant Blue) */
+  transform: scale(1.1); /* Slightly enlarge the link on hover */
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 10px 0; /* Stack navbar items on smaller screens */
+    font-size: 16px; /* Adjust font size */
+  }
 }
