@@ -65,7 +65,7 @@ header nav ul li a {
 
 .banner-container {
   display: flex;
-  width: 80%; /* Adjust width for responsiveness */
+  width: 100%; /* Adjust width for responsiveness */
   max-width: 1200px; /* Max width for large screens */
   height: 80%; /* Adjust height as per preference */
   border-radius: 10px; /* Optional: Rounded corners for a sleek look */
@@ -164,5 +164,18 @@ nav a:hover {
   nav a {
     margin: 10px 0; /* Stack navbar items on smaller screens */
     font-size: 16px; /* Adjust font size */
+  }
+
+  .banner-container {
+    flex-direction: column; /* Stacks the image and text vertically */
+  }
+
+  .banner-image {
+    height: 300px; /* Adjust image size on smaller screens */
+  }
+
+  .banner-text {
+    text-align: center; /* Centers text on small screens */
+    padding: 20px;
   }
 }

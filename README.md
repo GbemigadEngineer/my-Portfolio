@@ -152,3 +152,82 @@ font-family: 'Montserrat', sans-serif;
 nav a {
 font-family: 'Montserrat', sans-serif;
 }
+
+## Banner Section
+
+The banner area of the portfolio has been designed with a modern split-view layout. The left side features a professional image, and the right side contains my name, title, and a brief description of my background and aspirations as a Back-End Web Developer. This section is implemented with Flexbox to ensure responsiveness across different screen sizes. Although there is still a lot more to come, this is what we have added so far.
+
+/_ Banner Section _/
+#home {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #f5f5f5;
+}
+
+.banner-container {
+display: flex;
+width: 80%;
+max-width: 1200px;
+height: 80%;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.banner-image {
+flex: 1;
+overflow: hidden;
+}
+
+.banner-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.banner-text {
+flex: 1;
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: left;
+}
+
+.banner-text h1 {
+font-family: 'Montserrat', sans-serif;
+font-size: 3rem;
+margin-bottom: 10px;
+color: #333;
+}
+
+.banner-text h2 {
+font-family: 'Roboto', sans-serif;
+font-size: 1.5rem;
+margin-bottom: 15px;
+color: #555;
+}
+
+.banner-text p {
+font-family: 'Roboto', sans-serif;
+font-size: 1.1rem;
+color: #666;
+}
+
+/_ Responsive Design _/
+@media (max-width: 768px) {
+.banner-container {
+flex-direction: column;
+}
+
+    .banner-image {
+        height: 300px;
+    }
+
+    .banner-text {
+        text-align: center;
+        padding: 20px;
+    }
+
+}
