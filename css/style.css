@@ -16,12 +16,22 @@ html {
 
 /* General body styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
   padding: 20px;
   padding-top: 80px;
+}
+
+/* Headings font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Navigation bar */
@@ -82,6 +92,7 @@ nav a {
   font-weight: 600;
   letter-spacing: 1px; /* Slight spacing for elegance */
   transition: color 0.3s ease, transform 0.3s ease;
+  font-family: "Montserrat", sans-serif;
 }
 
 nav a:hover {
