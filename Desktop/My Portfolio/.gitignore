@@ -1,0 +1,32 @@
+# Ignore system files
+*.log
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# Ignore IDE/project files
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln
+*.sqlite
+
+# Ignore environment files
+env/
+venv/
+__pycache__/
+
+# Ignore system directories
+AppData/
+Application Data/
+Local Settings/
+MicrosoftEdgeBackups/
+OneDrive/
+Saved Games/
+Searches/
+
+# Ignore all untracked files in parent directories
+../../*
