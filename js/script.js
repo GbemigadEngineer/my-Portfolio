@@ -21,3 +21,7 @@ showLessLink.addEventListener("click", function (event) {
   aboutDetails.style.display = "none";
   learnMoreLink.style.opacity = 100;
 });
+
+//  Adding gynamic year to the footer
+const year = new Date().getFullYear();
+document.querySelector("footer p").textContent = `© ${year} Oduwole Oluwagbemiga. All rights reserved.`;
