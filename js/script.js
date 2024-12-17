@@ -24,4 +24,7 @@ showLessLink.addEventListener("click", function (event) {
 
 //  Adding dynamic year to the footer
 const year = new Date().getFullYear();
-document.querySelector("footer p").textContent = `© ${year} Oduwole Oluwagbemiga. All rights reserved.`;
+document.querySelector(
+  "footer p"
+).textContent = `© ${year} Oduwole Oluwagbemiga. All rights reserved.`;
+
