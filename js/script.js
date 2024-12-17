@@ -22,6 +22,6 @@ showLessLink.addEventListener("click", function (event) {
   learnMoreLink.style.opacity = 100;
 });
 
-//  Adding gynamic year to the footer
+//  Adding dynamic year to the footer
 const year = new Date().getFullYear();
 document.querySelector("footer p").textContent = `© ${year} Oduwole Oluwagbemiga. All rights reserved.`;
