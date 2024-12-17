@@ -254,12 +254,15 @@ nav a:hover {
 
   .banner-container {
     flex-direction: column; /* Stacks the image and text vertically */
+    height: auto;
   }
 
   .banner-image {
     height: 300px; /* Adjust image size on smaller screens */
   }
-
+  .banner-text h1 {
+    font-size: 2rem;
+  }
   .banner-text {
     text-align: center; /* Centers text on small screens */
     padding: 20px;
