@@ -256,97 +256,72 @@ nav a:hover {
   color: #0056b3;
 }
 
-/* The my gallery session */
-
+/* General slider styles */
 .slider {
-  max-width: 100rem;
-  height: 50rem;
-  margin: 0 auto;
   position: relative;
-
-  /* IN THE END */
   overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-.slide {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 50rem;
-
+/* Slides container */
+.slides {
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* THIS creates the animation! */
-  transition: transform 1s;
+  transition: transform 0.5s ease-in-out;
 }
 
-.slide > img {
-  /* Only for images that have different size than slide */
+/* Individual images */
+.slides img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  flex-shrink: 0;
 }
 
-.slider__btn {
+/* Navigation buttons */
+button.prev,
+button.next {
   position: absolute;
   top: 50%;
-  z-index: 10;
-
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
   border: none;
-  background: rgba(255, 255, 255, 0.7);
-  font-family: inherit;
-  color: #333;
-  border-radius: 50%;
-  height: 5.5rem;
-  width: 5.5rem;
-  font-size: 3.25rem;
+  padding: 10px 15px;
   cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
 }
 
-.slider__btn--left {
-  left: 6%;
-  transform: translate(-50%, -50%);
+button.prev {
+  left: 10px;
 }
 
-.slider__btn--right {
-  right: 6%;
-  transform: translate(50%, -50%);
+button.next {
+  right: 10px;
 }
 
+/* Dots (pagination) */
 .dots {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
+  justify-content: center;
+  margin: 10px 0;
 }
 
-.dots__dot {
-  border: none;
-  background-color: #b9b9b9;
-  opacity: 0.7;
-  height: 1rem;
-  width: 1rem;
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: gray;
   border-radius: 50%;
-  margin-right: 1.75rem;
   cursor: pointer;
-  transition: all 0.5s;
-
-  /* Only necessary when overlying images */
-  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
 }
 
-.dots__dot:last-child {
-  margin: 0;
+.dot.active {
+  background-color: black;
 }
 
-.dots__dot--active {
-  /* background-color: #fff; */
-  background-color: #fff;
-  opacity: 1;
-}
 
 @media (max-width: 768px) {
   nav {
