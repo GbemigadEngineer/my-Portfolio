@@ -65,24 +65,10 @@ button:hover {
 }
 
 /* Banner section */
-.banner {
-  text-align: center;
-  padding: 50px;
-  background-color: #007bff;
-  color: white;
-}
-#home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f5f5f5; /* Light background color */
-}
-
 .banner-container {
   display: flex;
   width: 100%; /* Adjust width for responsiveness */
-  max-width: 1200px; /* Max width for large screens */
+  max-width: 2200px; /* Max width for large screens */
   height: 80%; /* Adjust height as per preference */
   border-radius: 10px; /* Optional: Rounded corners for a sleek look */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
@@ -106,7 +92,6 @@ button:hover {
   justify-content: center;
   text-align: left; /* Align text to the left */
 }
-
 .banner-text h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 3rem;
@@ -126,6 +111,7 @@ button:hover {
   font-size: 1.1rem;
   color: #666;
 }
+
 /* Section headings */
 section h2 {
   margin-top: 20px;
@@ -291,7 +277,7 @@ button.next {
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 button.prev {
@@ -321,7 +307,6 @@ button.next {
 .dot.active {
   background-color: black;
 }
-
 
 @media (max-width: 768px) {
   nav {
