@@ -159,7 +159,7 @@ header nav {
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   box-sizing: border-box; /* Slightly stronger shadow for better contrast */
-  margin-top: 0.07em;
+  margin-top: 0.05em;
 }
 
 #about h2 {
@@ -265,12 +265,48 @@ header nav {
     margin-top: 30px;
   }
 }
+
+/* Gallery session */
+
+#gallery {
+  padding: 3rem 2rem;
+  background-color: #f4f4f4;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url("/img/billy-huynh-W8KTS-mhFUE-unsplash.jpg") no-repeat center
+      center/cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 0.05rem;
+}
+
+#gallery h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #00aaff;
+  margin-bottom: 2rem;
+}
+
+.project-details {
+  margin-bottom: 2rem;
+}
+
+.project-details h3 {
+  font-size: 1.5rem;
+  color: #ddd;
+  margin-bottom: 0.5rem;
+}
+
+.project-details p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
 /* General slider styles */
 .slider {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   margin: 20px auto;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -329,6 +365,23 @@ button.next {
 
 .dot.active {
   background-color: black;
+}
+
+#gallery h3 {
+  color: #ddd;
+}
+
+h3 a {
+  font-size: 1rem;
+  color: #ff5e5b;
+  text-decoration: none;
+  border-bottom: 1px solid #ff5e5b;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+h3 a:hover {
+  color: #00aaff;
+  border-color: #333;
 }
 
 /* Footer */
