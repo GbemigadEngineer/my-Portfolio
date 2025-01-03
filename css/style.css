@@ -26,9 +26,13 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
 }
+.hidden {
+  display: none;
+}
 
 /* Navigation bar */
 /* Navigation bar */
+
 header nav {
   background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
   position: sticky; /* Stick to top when scrolling */
@@ -81,7 +85,8 @@ header nav {
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
-    url("/billy-huynh-W8KTS-mhFUE-unsplash.jpg") no-repeat center center/cover;
+    url("/img/billy-huynh-W8KTS-mhFUE-unsplash.jpg") no-repeat center
+      center/cover;
   color: #fff;
   text-align: center;
 }
@@ -130,136 +135,136 @@ header nav {
   background: #0088cc;
 }
 
-/* Section headings */
-section h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 20px;
-  background: #333;
-  color: white;
-  padding: 10px;
-}
-
-/* Navbar */
-nav {
-  background-color: #1f2937; /* Dark Grayish Blue */
-  color: white; /* Text color for navbar items */
-  padding: 15px 0; /* Padding around navbar */
-  position: fixed; /* Keep navbar fixed on top */
-  top: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure the navbar stays on top */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-}
-
-nav a {
-  color: white; /* Default color for navbar links */
-  text-decoration: none; /* Remove underline */
-  margin: 0 15px; /* Space out links */
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 1px; /* Slight spacing for elegance */
-  transition: color 0.3s ease, transform 0.3s ease;
-  font-family: "Montserrat", sans-serif;
-}
-
-nav a:hover {
-  color: #3b82f6; /* Hover color for links (Vibrant Blue) */
-  transform: scale(1.1); /* Slightly enlarge the link on hover */
-}
-
 /* About Me Section */
-#about {
-  background-color: #fff; /* White background for a clean look */
-  padding: 40px 20px; /* Add padding for spacing */
-  max-width: 1200px; /* Limit the width for readability */
-  margin: 0 auto; /* Center the section horizontally */
-  border-radius: 10px; /* Optional: Rounded corners for a modern look */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
-}
-
-/* About Me Intro */
-.about-intro {
-  text-align: center; /* Center text for intro */
-  margin-bottom: 30px; /* Add space below the intro section */
-}
-
-.about-intro h3 {
-  font-size: 1.8rem; /* Larger font size for the subtitle */
-  margin-bottom: 15px;
-  color: #333; /* Darker text color */
-}
-
-.about-intro p {
-  font-size: 1.1rem; /* Adjust font size for readability */
-  color: #555;
-  line-height: 1.6; /* Space out the text for better legibility */
-}
-
-/* Initially hide the additional details */
-.about-details {
-  display: none;
-  margin-top: 20px;
+/* About Me Section */
+.about-container {
+  width: 100%;
+  display: flex;
   flex-direction: column;
-  gap: 20px; /* Space between sections */
+  margin: o;
+  padding: 40px;
+  box-sizing: border-box;
+  border-radius: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+#about {
+  width: 100%;
+  margin: 0;
+
+  padding: 60px 20px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url("/img/billy-huynh-W8KTS-mhFUE-unsplash.jpg") no-repeat center
+      center/cover;
+  color: #fff; /* White text for contrast */
   text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box; /* Slightly stronger shadow for better contrast */
+  margin-top: 0.07em;
 }
 
-.about-details h3 {
-  font-size: 1.6rem;
-  color: #007bff; /* Blue color for section titles */
+#about h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00aaff; /* Matching color with nav and banner */
+  margin-bottom: 20px;
+}
+
+#about .about-intro {
+  display: flex;
+  flex-direction: column; /* Aligns content vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+#about .about-intro h3 {
+  font-size: 2rem;
+  color: #fff;
   margin-bottom: 10px;
 }
 
-.about-details ul {
-  list-style: none;
-  padding-left: 20px; /* Indent the list items */
-}
-
-.about-details ul li {
+#about .about-intro p {
   font-size: 1.1rem;
-  color: #555;
-  line-height: 1.8; /* Add spacing between list items */
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #ddd; /* Lighter text for readability */
 }
 
-#learn-more,
-#show-less {
-  color: #007bff; /* Blue color for the link */
-  cursor: pointer;
-  text-decoration: underline;
+#about .about-intro a {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-#learn-more:hover,
-#show-less:hover {
-  color: #0056b3; /* Darker blue on hover */
+#about .about-intro a:hover {
+  color: #0088cc;
 }
 
-#learn-more {
-  font-weight: bold; /* Make "Learn More" link bold */
-  margin-top: 20px; /* Add space above the link */
+/* About Details Styling */
+#about-details {
+  margin-top: 40px;
+  text-align: center; /* Center the content */
 }
 
-#show-less {
-  font-weight: bold; /* Make "Show Less" link bold */
-  margin-top: 20px; /* Add space above the link */
-}
-/* Style for Learn More link */
-#learn-more {
-  color: #007bff;
-  cursor: pointer;
-  text-decoration: underline;
+#about-details h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-#learn-more:hover {
-  color: #0056b3;
+#about-details ul {
+  list-style: none;
+  padding: 0;
 }
 
+#about-details ul li {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #ddd; /* Lighter text for readability */
+  line-height: 1.6;
+}
+
+#about-details p {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+#about-details a {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#about-details a:hover {
+  color: #0088cc;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  #about h2 {
+    font-size: 2.5rem;
+  }
+
+  #about .about-intro h3 {
+    font-size: 1.8rem;
+  }
+
+  #about .about-intro p,
+  #about-details ul li,
+  #about-details p {
+    font-size: 1rem;
+  }
+
+  #about-details {
+    margin-top: 30px;
+  }
+}
 /* General slider styles */
 .slider {
   position: relative;
@@ -324,6 +329,15 @@ button.next {
 
 .dot.active {
   background-color: black;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  background: #333;
+  color: white;
+  padding: 10px;
 }
 
 @media (max-width: 768px) {

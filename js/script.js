@@ -11,7 +11,7 @@ const showLessLink = document.getElementById("show-less");
 learnMoreLink.addEventListener("click", function (event) {
   event.preventDefault();
   learnMoreLink.style.opacity = 0;
-  aboutDetails.style.display = "flex";
+  aboutDetails.style.display = "block";
   showLessLink.style.opacity = 100;
 });
 
