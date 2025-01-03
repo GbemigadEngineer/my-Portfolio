@@ -10,9 +10,9 @@ li {
   box-sizing: border-box;
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 /* General body styling */
 body {
