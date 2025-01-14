@@ -135,6 +135,13 @@ header nav {
   background: #0088cc;
 }
 
+.action-btn a button {
+  margin-top: 20px 25px;
+  padding: 20px;
+  height: 50px;
+  border: 2px solid;
+
+}
 /* About Me Section */
 /* About Me Section */
 .about-container {
@@ -416,6 +423,9 @@ h3 a:hover {
   color: #00aaff;
 }
 
+.links{
+  margin-bottom: 40px;
+}
 /* Footer */
 footer {
   text-align: center;
