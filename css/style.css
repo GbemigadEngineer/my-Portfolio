@@ -303,7 +303,7 @@ header nav {
 }
 
 .project-details h3 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: #ddd;
   margin-bottom: 0.5rem;
 }
@@ -387,7 +387,7 @@ button.next {
 }
 
 h3 a {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #ff5e5b;
   text-decoration: none;
   border-bottom: 1px solid #ff5e5b;
