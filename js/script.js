@@ -1,10 +1,99 @@
 "use strict";
 
+
+//  navs section
+
+//  Smooth scrolling navs with Intersection Observer API
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
+const options = {
+  threshold: 0.5,
+};
+
+const observer = new IntersectionObserver(function (entries) {
+  entries.forEach((entry) => {
+    const id = entry.target.getAttribute("id");
+    const navLink = document.querySelector(`nav ul li a[href="#${id}"]`);
+    if (entry.isIntersecting) {
+      document.querySelectorAll("nav ul li a").forEach((link) => {
+        link.classList.remove("active");
+      });
+      navLink.classList.add("active");
+    }
+  });
+}, options);
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
+
+// Smooth scroll behavior on click
+navLinks.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+    const targetId = this.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+
+    targetSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+});
+
+// barner area section
+
+// implementing smooth scrolling on CTA buttons
+
+ // Select all anchor tags inside the action buttons
+ const links = document.querySelectorAll('.action-btn a');
+
+ // Add a click event to each link
+ links.forEach(link => {
+   link.addEventListener('click', function (event) {
+     event.preventDefault(); // Prevent default anchor behavior
+
+     // Get the target section from the href attribute
+     const targetId = this.getAttribute('href').substring(1);
+     const targetElement = document.getElementById(targetId);
+
+     // Scroll to the target section smoothly
+     targetElement.scrollIntoView({ behavior: 'smooth' });
+   });
+ });
+
+ // Intersection Observer to highlight sections
+ const observerOptions = {
+   root: null, // viewport
+   threshold: 0.5, // 50% visibility
+ };
+
+ const observerCallback = (entries) => {
+   entries.forEach(entry => {
+     if (entry.isIntersecting) {
+       // Additional actions can be added here when sections come into view
+     }
+   });
+ };
+
+ const cta_observer = new IntersectionObserver(observerCallback, observerOptions);
+
+ // Observe each section
+ document.querySelectorAll('section').forEach(section => cta_observer.observe(section));
+
+
+
+
+
+
+//  about me section
 const learnMoreLink = document.getElementById("learn-more");
 
 const aboutDetails = document.querySelector(".about-details");
 
 const showLessLink = document.getElementById("show-less");
+
+
 
 // Event listener to the about me section
 
@@ -22,11 +111,8 @@ showLessLink.addEventListener("click", function (event) {
   learnMoreLink.style.opacity = 100;
 });
 
-//  Adding dynamic year to the footer
-const year = new Date().getFullYear();
-document.querySelector(
-  "footer p"
-).textContent = `© ${year} Oduwole Oluwagbemiga. All rights reserved.`;
+
+
 
 document.querySelectorAll(".slider").forEach((slider) => {
   const slides = slider.querySelector(".slides");
@@ -37,44 +123,9 @@ document.querySelectorAll(".slider").forEach((slider) => {
   const totalSlides = images.length;
   let currentIndex = 0;
 
-  //  Smooth scrolling with Intersection Observer API
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("nav ul li a");
-  const options = {
-    threshold: 0.5,
-  };
 
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach((entry) => {
-      const id = entry.target.getAttribute("id");
-      const navLink = document.querySelector(`nav ul li a[href="#${id}"]`);
-      if (entry.isIntersecting) {
-        document.querySelectorAll("nav ul li a").forEach((link) => {
-          link.classList.remove("active");
-        });
-        navLink.classList.add("active");
-      }
-    });
-  }, options);
-
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
-
-  // Smooth scroll behavior on click
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      const targetId = this.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
-
-      targetSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    });
-  });
-
+ 
+  
   // Create dots for the slider
   for (let i = 0; i < totalSlides; i++) {
     const dot = document.createElement("span");
@@ -126,3 +177,11 @@ document.querySelectorAll(".slider").forEach((slider) => {
   // Adjust slider on resize
   window.addEventListener("resize", updateSlider);
 });
+
+
+//  footer section
+//  Adding dynamic year to the footer
+const year = new Date().getFullYear();
+document.querySelector(
+  "footer p"
+).textContent = `© ${year} Oduwole Oluwagbemiga. All rights reserved.`;
