@@ -414,16 +414,17 @@ h3 a:hover {
   color: #ddd;
   margin-bottom: 10px;
 }
-#contact a button {
-  background-color: #ff5e5b;
-  color: #ddd;
-  padding: 10px 10px;
-  border: none;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  margin-bottom: 20px;
+#contact a button{
+    padding: 10px 20px;
+    color: #fff;
+    background: #00aaff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.logo-btn {
+  width: 30px
 }
 
 #contact a button:hover {
@@ -444,6 +445,8 @@ footer {
   padding: 10px;
 }
 
+
+/* Responsiveness */
 @media (max-width: 768px) {
   nav {
     display: flex;
