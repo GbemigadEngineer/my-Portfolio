@@ -416,7 +416,8 @@ h3 a:hover {
 }
 
 #contact h2 {
-  color: #ddd;
+  color: #00aaff;
+  margin-bottom: 10px;
 }
 #contact p {
   font-size: 1.2em;
@@ -435,6 +436,8 @@ padding: 20px
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .logo-btn {
   width: 40px;
