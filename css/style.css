@@ -75,6 +75,16 @@ header nav {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Sticky class styles */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #222;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Banner section */
 /* Banner Section Styling */
 .banner {

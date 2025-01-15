@@ -3,6 +3,26 @@
 
 //  navs section
 
+// sticky navigation bar
+
+// Select the navbar
+const navbar = document.getElementById('navbar');
+
+// Get the offset position of the navbar
+const stickyOffset = navbar.offsetTop;
+
+// Add a scroll event listener
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset >= stickyOffset) {
+    // Add the "sticky" class when scrolling past the navbar
+    navbar.classList.add('sticky');
+  } else {
+    // Remove the "sticky" class when scrolling back up
+    navbar.classList.remove('sticky');
+  }
+});
+
+
 //  Smooth scrolling navs with Intersection Observer API
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav ul li a");
