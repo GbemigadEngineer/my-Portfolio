@@ -414,21 +414,33 @@ h3 a:hover {
   color: #ddd;
   margin-bottom: 10px;
 }
+#contact a {
+padding: 20px
+}
 #contact a button{
-    padding: 10px 20px;
-    color: #fff;
-    background: #00aaff;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  align-items: center;
+  justify-content: center;
 }
 .logo-btn {
-  width: 30px
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
 }
 
 #contact a button:hover {
-  color: #00aaff;
+  transform: scale(1.2);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+  background-color: #f0f0f0; /* Slight background color change */
+}
+#contact a button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Focus ring */
 }
 
 .links{
